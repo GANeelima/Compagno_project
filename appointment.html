@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style1.css">
+    <title>Video-2</title>
+    <script>
+        
+        function valid(){
+         var fn=document.getElementById('name').value;
+         var email=document.getElementById('email').value;
+        //  var phno=document.getElementById('Phno').value;
+         var y=email.indexOf('@');
+         var z=email.lastIndexOf(".");
+ 
+         if (fn.length==0){
+             window.alert('Enter name: ');
+         }
+         if (email.length==0){
+             window.alert('Enter email (yourname@gmail.com) ');
+         }
+        //  if (phno.length==0){
+        //      window.alert('Enter Phone Number: ');
+        //  }
+    //      if (phno.length==10){
+    //          for (var i=0;i<phno.length;i++){
+    //              if(isNaN(phno[i])){
+    //                  alert('Enter valid phone number ');
+    //                  return;
+    //          }
+    //      }
+    //      //alert("Valid Phone number");
+    //  }
+    //  else{
+    //      alert("Invalid Phone number");
+    //  }
+         if (email.length!=0){
+             if (y<1 || z<y+2 || z+2 >= email.length){
+                 window.alert("Invalid email address format. Please enter yourname@gmail.com");
+             }
+         }
+//          let form = document.getElementsByTagName("form")[0];
+//         form.addEventListener("submit", (e) => {
+//         e.preventDefault();
+//         alert("Form Submitted!");
+// });
+// var formData = document.forms.myform;
+// var show = document.getElementById("alert");
+
+// formData.onsubmit = function() {
+
+//   if (formData.name.value == "") {
+//     show.innerHTML = "Please fill out all fields!";
+//     return false;
+//   } else {
+//     $("#alert").css("display", "block");
+//     show.innerHTML = "successful submission of form!";
+//     return true;
+//   }
+// };
+         
+}
+
+     
+     </script>
+</head>
+
+<body class="background main_bg">
+    <div class="form">
+        <div class="form-text">
+            <h1>Book Now</h1>
+            <p>Kindly fill the following details to book an appointment.</p>
+        </div>
+        <div class="main-form">
+            <form action="index.php" method="get" name="myform">
+                <div>
+                    <span>Your full name ?</span>
+                    <input type="text" name="name" id="name" placeholder="Write your name here..." required>
+                </div>
+                <div>
+                    <span>Your email address ?</span>
+                    <input type="email" name="name" id="email" placeholder="Write your email here..." required> 
+                </div>
+                <div>
+                    <!-- <---this is the select option--->
+                    <span>Number of persons?</span>
+                    <select name="people" id="people" required>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                    </select>
+                    <!-- <---this is the select option--->
+                </div>
+                <div>
+                    <span>Enter time slot</span>
+                    <input type="time" name="time" id="time" min="8:00" max="20:00" placeholder="time" required>
+                </div>
+                <center><div>
+                    <span>What is the date ?</span>
+                    <input type="date" name="date" id="date" placeholder="date" required>
+                </div>
+                <!-- <div>
+                    <span>Your phone number ?</span>
+                    <input type="number" name="number" id="Phno" placeholder="Write your number here..." required>
+                </div> -->
+                <div id="submit">
+                    <input type="submit" onclick="valid()" value="SUBMIT" id="submit">
+                </div>
+
+
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

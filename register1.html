@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <title>Register Compagno</title>
+    <link rel="stylesheet" href="stylesheet1.css">
+    <script src="script1.js"></script>
+</head>
+
+<body class="background">
+
+    <form class="register-box">
+        <div>
+            <img src="compagno_logo.jpg" alt="logo">
+        </div>
+
+        <h2>COMPAGNO</h2>
+        <h3>Register</h3>
+        
+        <div class="components">
+            
+            <p>
+                <label for="FirstName">Username</label>
+                <input type="text" id="firstname" 
+                required>
+            </p>
+            <!-- <p>
+                <label for="LastName">Last Name</label>
+                <input type="text" id="lastname">
+            </p> -->
+            <!-- <p>
+                <div class="c1">
+                    <label for="gender">Gender</label>
+                
+                    <div class="c2">
+                        <div class="one-row">
+                            <input type="radio" name="rn">Male <br>
+                            <input type="radio" name="rn">Female 
+                        </div>
+                        <div class="one-row">
+                            <input type="radio" name="rn">Other <br>
+                            <input type="radio" name="rn" >Prefer not to say
+                        </div>
+                    </div>
+                </div>
+                    
+            </p> -->
+            <p>
+                <label for="Age">Age</label>
+                <input type="number" id="age"
+                required/>
+            </p>
+            <!-- <p>
+                <label for="Phno">Phone Number</label>
+                <input type="number" id="phno"
+                required/>
+            </p> -->
+            <p>
+                <label for="Email">Email</label>
+                <input type="email" id="email"/>
+            </p>
+            <p>
+                <label for="Password">Password</label>
+                <input type="password" 
+                placeholder="********" id="pw1"/>
+            </p>
+            <p>
+                <label for="re-password">Confirm Password</label>
+                <input type="password"
+                placeholder="********" id="pw2"/>
+            </p>
+            <p class="components">
+                <!-- <a href="#" onclick="validation()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    REGISTER
+                    
+                </a> -->
+                <button onclick="validation()">REGISTER</button>
+                <br>
+                    <br>
+                <a href="login1.html">
+                    Already have an account? Login.
+                </a>
+            </p>
+        </div>
+    </form>
+    
+</body>
+</html>
